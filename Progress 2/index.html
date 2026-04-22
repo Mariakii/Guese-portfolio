@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA KII | Cristina Guese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #4a5f3e;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cpath d='M0 80 Q60 40 120 80 T240 80' stroke='%23ffffff' stroke-width='3' fill='none' opacity='0.15'/%3E%3Cpath d='M0 110 Q60 70 120 110 T240 110' stroke='%23ffffff' stroke-width='3' fill='none' opacity='0.15'/%3E%3Cpath d='M0 140 Q60 100 120 140 T240 140' stroke='%23ffffff' stroke-width='3' fill='none' opacity='0.15'/%3E%3Cpath d='M0 170 Q60 130 120 170 T240 170' stroke='%23ffffff' stroke-width='3' fill='none' opacity='0.12'/%3E%3C/svg%3E");
+            background-size: 240px 240px;
+        }
+
+        .nav-link { transition: color 0.3s; }
+        .nav-link:hover { color: #a8c4a0; }
+
+        .manga-grid img {
+            transition: all 0.3s ease;
+        }
+        .manga-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- HEADER -->
+    <header class="bg-black sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="text-4xl font-bold tracking-[6px]">MA KII</div>
+            <nav class="flex gap-10 text-sm uppercase font-medium">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#about" class="nav-link">ABOUT ME</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#contacts" class="nav-link">CONTACTS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="flex justify-center">
+                <div class="border-4 border-[#a8c4a0] p-3 bg-white/10 rounded-3xl shadow-2xl">
+                    <img src="images/profile.jpg" alt="Cristina" class="rounded-2xl max-w-md w-full">
+                </div>
+            </div>
+            <div>
+                <h1 class="text-6xl md:text-7xl font-semibold leading-none mb-6">Hi I’m Cristina!</h1>
+                <p class="text-lg leading-relaxed max-w-lg opacity-90">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})"
+                        class="mt-8 px-10 py-4 bg-[#a8c4a0] hover:bg-white hover:text-black text-black font-medium rounded-full text-xl transition-all">
+                    Contact me!
+                </button>
+            </div>
+        </div>
+    </section>
+    
+<!-- ABOUT ME -->
+    <section id="about" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid md:grid-cols-12 gap-16 items-start">
+            <div class="md:col-span-5">
+                <h2 class="text-[#a8c4a0] text-5xl font-semibold mb-8">About me</h2>
+                <p class="text-lg leading-relaxed opacity-90">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <!-- Manga Collage - exact layout from screenshot -->
+            <div class="md:col-span-7 manga-grid grid grid-cols-3 gap-4">
+                <img src="images/art1.jpg" class="col-span-2 rounded-2xl">
+                <img src="images/art2.jpg" class="rounded-2xl">
+                <img src="images/art3.jpg" class="rounded-2xl">
+                <img src="images/art4.jpg" class="rounded-2xl">
+                <img src="images/art5.jpg" class="rounded-2xl">
+                <img src="images/art6.jpg" class="col-span-2 rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
